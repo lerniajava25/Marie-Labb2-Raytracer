@@ -89,6 +89,10 @@ public class Main {
        + testClamp.getGreen() + ", "
        + testClamp.getBlue());
 
+       Hit hit = new Hit(2.5);
+       System.out.println( "Hit: "
+       + hit.getT());
+
     }
 
 
