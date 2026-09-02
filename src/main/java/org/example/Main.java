@@ -2,7 +2,7 @@ package org.example;
 
 public class Main {
 
-   public static void main(String[] args) {
+   static void main(String[] args) {
 
         Vector3D a = new Vector3D(1, 2, 3);
         Vector3D b = new Vector3D(4, 5, 6);
@@ -48,13 +48,25 @@ public class Main {
                 + result.getY() + ", "
                 + result.getZ());
 
-       Vector3D zero = new Vector3D(0, 0, 0);
-       Vector3D normalizedZero = zero.normalize();
+      // Vector3D zero = new Vector3D(0, 0, 0);
+       //Vector3D normalizedZero = zero.normalize();
 
-       System.out.println("Zero normalized: "
-               + normalizedZero.getX() + ", "
-               + normalizedZero.getY() + ", "
-               + normalizedZero.getZ());
+       //System.out.println("Zero normalized: "
+         //      + normalizedZero.getX() + ", "
+           //    + normalizedZero.getY() + ", "
+             //  + normalizedZero.getZ());
+
+       Vector3D origin = new Vector3D(0, 0, 0);
+       Vector3D direction = new Vector3D(1, 2, 3);
+
+       Ray ray = new Ray(origin, direction);
+
+       Vector3D point = ray.at(2);
+
+       System.out.println("Ray at 2: "
+               + point.getX() + ", "
+               + point.getY() + ", "
+               + point.getZ());
 
 
     }
