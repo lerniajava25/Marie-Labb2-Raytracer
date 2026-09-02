@@ -1,6 +1,6 @@
 package org.example;
 
-public class Hit {
+public final class Hit {
     private final double t;
 
     public Hit (double t) {
