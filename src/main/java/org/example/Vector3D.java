@@ -1,6 +1,6 @@
 package org.example;
 
-public class Vector3D {
+public final class Vector3D {
 
     private final double x;
     private final double y;
@@ -57,7 +57,12 @@ public class Vector3D {
     }
 
     public Vector3D normalize() {
-        return this.multiply(1/length());
+        double vectorLength = length();
+
+        if (vectorLength == 0.0) {
+            throw new IllegalStateException("Kan inte normalisera en vektor med längd 0");
+        }
+        return this.multiply(1.0/vectorLength);
     }
 
 }

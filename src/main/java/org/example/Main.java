@@ -48,15 +48,15 @@ public class Main {
                 + result.getY() + ", "
                 + result.getZ());
 
-        Vector3D vector = new Vector3D(3, 4, 0);
-        Vector3D normalized = vector.normalize();
+       Vector3D zero = new Vector3D(0, 0, 0);
+       Vector3D normalizedZero = zero.normalize();
 
-        System.out.println("Normalized: "
-                + normalized.getX() + ", "
-                + normalized.getY() + ", "
-                + normalized.getZ());
+       System.out.println("Zero normalized: "
+               + normalizedZero.getX() + ", "
+               + normalizedZero.getY() + ", "
+               + normalizedZero.getZ());
 
-        System.out.println("Normalized length: " + normalized.length());
+
     }
 
 
