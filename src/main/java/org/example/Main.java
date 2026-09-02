@@ -68,6 +68,26 @@ public class Main {
                + point.getY() + ", "
                + point.getZ());
 
+       Color red = new Color(1.0, 0.0, 0.0);
+       Color green = new Color(0.0, 1.0, 0.0);
+
+       Color colorSum = red.add(green);
+       System.out.println("Color: "
+               + colorSum.getRed() + ", "
+               + colorSum.getGreen() + ", "
+               + colorSum.getBlue());
+
+       Color colorMultiplied = red.multiply(0.5);
+       System.out.println("Multiply: "
+               + colorMultiplied.getRed() + ", "
+               + colorMultiplied.getGreen() + ", "
+               + colorMultiplied.getBlue());
+
+       Color testClamp = new Color(1.5, -0.5, 0.5);
+       System.out.println("Clamp: "
+       + testClamp.getRed() + ", "
+       + testClamp.getGreen() + ", "
+       + testClamp.getBlue());
 
     }
 
