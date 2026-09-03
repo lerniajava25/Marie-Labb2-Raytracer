@@ -65,4 +65,10 @@ public final class Vector3D {
         return this.multiply(1.0/vectorLength);
     }
 
+    public double dot(Vector3D other) {
+        return this.x * other.x
+                + this.y * other.y
+                + this.z * other.z;
+    }
+
 }

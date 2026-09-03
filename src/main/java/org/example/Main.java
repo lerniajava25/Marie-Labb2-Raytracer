@@ -56,17 +56,17 @@ public class Main {
            //    + normalizedZero.getY() + ", "
              //  + normalizedZero.getZ());
 
-       Vector3D origin = new Vector3D(0, 0, 0);
-       Vector3D direction = new Vector3D(1, 2, 3);
+       //Vector3D origin = new Vector3D(0, 0, 0);
+       //Vector3D direction = new Vector3D(1, 2, 3);
 
-       Ray ray = new Ray(origin, direction);
+      // Ray ray = new Ray(origin, direction);
 
-       Vector3D point = ray.at(2);
+       //Vector3D point = ray.at(2);
 
-       System.out.println("Ray at 2: "
-               + point.getX() + ", "
-               + point.getY() + ", "
-               + point.getZ());
+       //System.out.println("Ray at 2: "
+         //      + point.getX() + ", "
+           //    + point.getY() + ", "
+             //  + point.getZ());
 
        Color red = new Color(1.0, 0.0, 0.0);
        Color green = new Color(0.0, 1.0, 0.0);
@@ -84,14 +84,32 @@ public class Main {
                + colorMultiplied.getBlue());
 
        Color testClamp = new Color(1.5, -0.5, 0.5);
-       System.out.println("Clamp: "
+       IO.println("Clamp: "
        + testClamp.getRed() + ", "
        + testClamp.getGreen() + ", "
        + testClamp.getBlue());
 
-       Hit hit = new Hit(2.5);
-       System.out.println( "Hit: "
-       + hit.getT());
+       //Hit hit = new Hit(2.5);
+       //IO.println( "Hit: "
+       //+ hit.getT());
+
+       //Sphere sphere = new Sphere(new Vector3D(0,0,0), 2.0);
+       //IO.println( "Sphere: " +
+        //       sphere);
+
+       Sphere sphere = new Sphere(new Vector3D(0,0,0), 2.0);
+       Ray ray = new Ray(
+               new Vector3D(-5,0,0),
+               new Vector3D(2,0,0)
+       );
+
+       Hit hit = sphere.hit(ray);
+
+       if (hit != null) {
+           IO.println("Träff vid t: " + hit.getT());
+       } else {
+           IO.println(" Ingen träff");
+       }
 
     }
 
