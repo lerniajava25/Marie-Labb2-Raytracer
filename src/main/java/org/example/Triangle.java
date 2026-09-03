@@ -44,6 +44,6 @@ public class Triangle extends Shape {
             return null;
         }
 
-        return new Hit(t);
+        return new Hit(t, this);
     }
 }
