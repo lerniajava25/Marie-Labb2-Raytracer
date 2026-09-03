@@ -106,7 +106,7 @@ public class Main {
 
        Ray ray = new Ray(
                new Vector3D(0.5,0.5,1),
-               new Vector3D(0,0,1)
+               new Vector3D(0,0,-1)
        );
 
        Hit hit = triangle.hit(ray);
