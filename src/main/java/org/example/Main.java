@@ -93,9 +93,9 @@ public class Main {
        //IO.println( "Hit: "
        //+ hit.getT());
 
-       //Sphere sphere = new Sphere(new Vector3D(0,0,0), 2.0);
-       //IO.println( "Sphere: " +
-        //       sphere);
+       Sphere sphere = new Sphere(
+               new Vector3D(0.5,0.5,0.5), 0.25);
+
 
        Triangle triangle= new Triangle(
                new Vector3D(0,0,0),
@@ -109,13 +109,20 @@ public class Main {
                new Vector3D(0,0,-1)
        );
 
-       Hit hit = triangle.hit(ray);
+       Scene scene = new Scene();
+       scene.addShape(triangle);
+       scene.addShape(sphere);
+
+       Hit hit = scene.hit(ray);
+
+
 
        if (hit != null) {
            IO.println("Träff vid t: " + hit.getT());
        } else {
            IO.println(" Ingen träff");
        }
+
 
     }
 
