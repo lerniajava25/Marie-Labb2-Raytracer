@@ -71,4 +71,11 @@ public final class Vector3D {
                 + this.z * other.z;
     }
 
+    public Vector3D cross(Vector3D other) {
+        return new Vector3D(
+                this.y * other.z - this.z * other.y,
+                this.z * other.x - this.x * other.z,
+                this.x * other.y - this.y * other.x
+        );
+    }
 }
