@@ -97,13 +97,19 @@ public class Main {
        //IO.println( "Sphere: " +
         //       sphere);
 
-       Sphere sphere = new Sphere(new Vector3D(0,0,0), 2.0);
-       Ray ray = new Ray(
-               new Vector3D(-5,0,0),
-               new Vector3D(2,0,0)
+       Triangle triangle= new Triangle(
+               new Vector3D(0,0,0),
+       new Vector3D(2,0,0),
+       new Vector3D(0,2,0)
        );
 
-       Hit hit = sphere.hit(ray);
+
+       Ray ray = new Ray(
+               new Vector3D(0.5,0.5,1),
+               new Vector3D(0,0,1)
+       );
+
+       Hit hit = triangle.hit(ray);
 
        if (hit != null) {
            IO.println("Träff vid t: " + hit.getT());
