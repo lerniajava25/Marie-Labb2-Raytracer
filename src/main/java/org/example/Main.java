@@ -99,14 +99,14 @@ public class Main {
 
        Sphere sphere = new Sphere(new Vector3D(0,0,0), 2.0);
        Ray ray = new Ray(
-               new Vector3D(0,0,0),
-               new Vector3D(1,0,0)
+               new Vector3D(-5,0,0),
+               new Vector3D(2,0,0)
        );
 
        Hit hit = sphere.hit(ray);
 
        if (hit != null) {
-           IO.println("Träff vi t: " + hit.getT());
+           IO.println("Träff vid t: " + hit.getT());
        } else {
            IO.println(" Ingen träff");
        }

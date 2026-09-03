@@ -15,12 +15,8 @@ public class Sphere extends Shape{
     public Hit hit(Ray ray) {
         Vector3D toCenter = center.subtract(ray.getOrigin());
         double distance = toCenter.length();
-        Vector3D direction = ray.getDirection();
+        Vector3D direction = ray.getDirection().normalize();
         double projection = toCenter.dot(direction);
-
-        if (projection < 0) {
-            return null;
-        }
 
         double distanceSquared = distance * distance - projection * projection;
 
@@ -36,6 +32,10 @@ public class Sphere extends Shape{
 
         if (t < 0) {
             t = t1;
+        }
+
+        if (t < 0) {
+            return null;
         }
 
         return new Hit(t);

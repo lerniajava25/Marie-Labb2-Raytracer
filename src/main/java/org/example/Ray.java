@@ -7,7 +7,7 @@ public final class Ray {
 
     public Ray(Vector3D origin, Vector3D direction){
         this.origin = origin;
-        this.direction = direction;
+        this.direction = direction.normalize();
     }
 
     public Vector3D getOrigin() {
