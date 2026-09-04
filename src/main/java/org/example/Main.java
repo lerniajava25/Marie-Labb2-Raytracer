@@ -10,13 +10,13 @@ public class Main {
    static void main(String[] args) throws IOException {
 
        Sphere sphere = new Sphere(
-               new Vector3D(0.5,0.5,-2), 0.5);
+               new Vector3D(-0.7,0,-3), 0.5);
 
 
        Triangle triangle= new Triangle(
-               new Vector3D(0,0,-3),
-       new Vector3D(2,0,-3),
-       new Vector3D(0,2,-3)
+               new Vector3D(0.2,-0.5,-3),
+       new Vector3D(1.2,-0.5,-3),
+       new Vector3D(0.7,0.5,-3)
        );
 
 
